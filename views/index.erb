@@ -1,0 +1,18 @@
+<h1> Task list </h1>
+
+<p> Here are all of our tasks: </p>
+
+<ul>
+  <% @task_list.each() do |task| %>
+  <li> <%= task.description() %> </li>
+  <% end %>
+</ul>
+
+<form action='/task_list' method='post'>
+  <div class = "form-group">
+    <p> Create a new task: </p>
+    <label for='description'> Task Description </label>
+    <input id='description' name='description' type'text'>
+  </div>
+  <button class='btn btn-success' id ='save_task' type='submit'>Add task</button>
+</form>
